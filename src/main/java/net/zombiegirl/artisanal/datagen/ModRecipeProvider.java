@@ -26,7 +26,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("DND")
                 .pattern("SD ")
                 .input('D', Items.DIAMOND)
-                .input('N', Blocks.NETHERITE_BLOCK)
+                .input('N', Items.NETHERITE_BLOCK)
                 .input('S', Items.BREEZE_ROD)
                 .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
                 .criterion("has_breeze_rod", conditionsFromItem(Items.BREEZE_ROD))
