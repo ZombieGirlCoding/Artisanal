@@ -10,11 +10,11 @@ import net.zombiegirl.artisanal.item.custom.GreatSwordItem;
 
 public class ModItems {
 
-    public static final Item GREAT_SWORD = registerItem("great_sword", new GreatSwordItem());
+    public static final Item GREAT_SWORD = registerItem(new GreatSwordItem());
 
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(Artisanal.MOD_ID, name), item);
+    private static Item registerItem(Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(Artisanal.MOD_ID, "great_sword"), item);
     }
 
 
