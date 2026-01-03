@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "minecraft:netherite_block"
+    },
+    "S": {
+      "item": "minecraft:breeze_rod"
+    }
+  },
+  "pattern": [
+    " DD",
+    "DND",
+    "SD "
+  ],
+  "result": {
+    "count": 1,
+    "id": "artisanal:great_sword"
+  }
+}
