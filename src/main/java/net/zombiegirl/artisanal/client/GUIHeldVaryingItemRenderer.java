@@ -45,7 +45,6 @@ public class GUIHeldVaryingItemRenderer implements BuiltinItemRendererRegistry.D
     public void reload(ResourceManager manager) {
         final MinecraftClient client = MinecraftClient.getInstance();
         this.itemRenderer = client.getItemRenderer();
-        // ModelIdentifier takes (Identifier, variant) in newer mappings, so construct Identifier first
         Identifier inventoryModelId = Identifier.of(this.weaponId.getNamespace(), this.weaponId.getPath() + "_gui");
         Identifier worldModelId = Identifier.of(this.weaponId.getNamespace(), this.weaponId.getPath() + "_handheld");
         this.inventoryWeaponModel = client.getBakedModelManager().getModel(new ModelIdentifier(inventoryModelId, "inventory"));
@@ -55,7 +54,7 @@ public class GUIHeldVaryingItemRenderer implements BuiltinItemRendererRegistry.D
     @Override
     public void render(ItemStack stack, ModelTransformationMode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         matrices.push();
-        matrices.push();
+        matrices.pop();
         if (inventoryModes.contains(mode)) {
             this.itemRenderer.renderItem(stack, mode, false, matrices, vertexConsumers, light, overlay, this.inventoryWeaponModel);
         } else {
