@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -23,6 +24,10 @@ import org.slf4j.LoggerFactory;
 public class Artisanal implements ModInitializer {
     public static final String MOD_ID = "artisanal";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    public static Identifier id(String path) {
+        return Identifier.of(MOD_ID, path);
+    }
 
     @Override
     public void onInitialize() {
