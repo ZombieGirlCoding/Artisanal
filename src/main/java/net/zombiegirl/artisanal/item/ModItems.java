@@ -14,16 +14,15 @@ public class ModItems {
 
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(Artisanal.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(Artisanal.MOD_ID, "great_sword"), item);
     }
 
 
     public static void registerModItems () {
         Artisanal.LOGGER.info("Registering Mod Item For" + Artisanal.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(GREAT_SWORD);
-        });
+        net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register(entries ->
+                        entries.add(GREAT_SWORD));
     }
-
 }
