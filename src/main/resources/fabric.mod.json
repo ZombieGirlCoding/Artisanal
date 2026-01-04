@@ -18,9 +18,6 @@
 		"main": [
 			"net.zombiegirl.artisanal.Artisanal"
 		],
-      "client": [
-        "net.zombiegirl.artisanal.client.ModClient"
-      ],
 		"fabric-datagen": [
 			"net.zombiegirl.artisanal.ArtisanalDataGenerator"
 		]

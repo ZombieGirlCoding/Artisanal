@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "artisanal:item/great_sword"
+    "layer0": "artisanal:item/great_sword_handheld"
   },
   "display": {
     "thirdperson_righthand": { "rotation":[ -90,0,0 ], "translation":[0,1,0], "scale":[1,1,1] },
