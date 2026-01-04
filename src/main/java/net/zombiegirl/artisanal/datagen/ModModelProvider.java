@@ -17,7 +17,7 @@ public class ModModelProvider extends FabricModelProvider {
         super(output);
     }
 
-    public static final Model BIG_WEAPON_IN_HAND = model("item/template_big_weapon_in_hand", "_in_hand", TextureKey.LAYER0);
+    public static final Model BIG_WEAPON_IN_HAND = model("item/handheld", "_in_hand", TextureKey.LAYER0);
 
     private static Model model(String parent, @Nullable String variant, TextureKey... keys) {
         return new Model(Optional.of(Artisanal.id(parent)), Optional.ofNullable(variant), keys);
@@ -33,6 +33,25 @@ public class ModModelProvider extends FabricModelProvider {
 
     }
 
+    private void registerTemplateWeapon(Model templateModel, @Nullable String name, Item item, ItemModelGenerator generator) {
+        this.registerTemplateWeaponHandheld(templateModel, name, item, generator);
+        this.registerTemplateWeaponInventory(templateModel, name, item, generator);
+    }
+
+    private void registerTemplateWeapon(Model templateModel, @Nullable String name, Identifier itemId, ItemModelGenerator generator) {
+        this.registerTemplateWeaponHandheld(templateModel, name, itemId, generator);
+        this.registerTemplateWeaponInventory(templateModel, name, itemId, generator);
+    }
+
+    private void registerTemplateWeaponHandheld(Model templateModel, @Nullable String name, Item item, ItemModelGenerator generator) {
+        registerTemplateWeaponHandheld(templateModel, name, Registries.ITEM.getId(item), generator);
+    }
+
+    private void registerTemplateWeaponHandheld(Model templateModel, @Nullable String name, Identifier itemId, ItemModelGenerator generator) {
+        Identifier handheldModelName = (name == null ? getItemSubId(itemId, "_in_hand") : getItemSubId(itemId, "_" + name + "_in_hand"));
+        Identifier handheldTexture = (name == null ? getItemId(itemId) : getItemSubId(itemId, "_" + name));
+        templateModel.upload(handheldModelName, TextureMap.layer0(handheldTexture), generator.writer); // this is the actual handheld model
+    }
     private void registerTemplateWeaponInventory(Model templateModel, @Nullable String name, Item item, ItemModelGenerator generator) {
         registerTemplateWeaponInventory(templateModel, name, Registries.ITEM.getId(item), generator);
     }
@@ -46,6 +65,10 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier inventoryModelName = (name == null ? getItemSubId(itemModelId, "_inventory") : getItemSubId(itemModelId, "_" + name + "_inventory"));
 
         Models.HANDHELD.upload(inventoryModelName, TextureMap.layer0(inventoryTexture), generator.writer);
+    }
+
+    public static Identifier getItemId(Identifier itemId) {
+        return itemId.withPrefixedPath("item/");
     }
 
     private Identifier getItemSubId(Identifier itemId, String suffix) {

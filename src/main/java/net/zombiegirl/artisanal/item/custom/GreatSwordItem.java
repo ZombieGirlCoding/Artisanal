@@ -33,4 +33,5 @@ public class GreatSwordItem extends SwordItem {
         user.setCurrentHand(hand);
         return TypedActionResult.consume(itemStack);
     }
+
 }
