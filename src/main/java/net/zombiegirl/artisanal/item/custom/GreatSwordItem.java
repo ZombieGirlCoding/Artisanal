@@ -11,12 +11,14 @@ import net.minecraft.item.*;
 
 import net.minecraft.util.*;
 import net.minecraft.world.World;
+import net.zombiegirl.artisanal.event.GreatSwordBlockHandler;
 
 public class GreatSwordItem extends SwordItem {
 
     public GreatSwordItem() {
         super(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 8, -2.75f)));
     }
+
 
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BLOCK;

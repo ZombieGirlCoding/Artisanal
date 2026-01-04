@@ -14,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.zombiegirl.artisanal.event.GreatSwordBlockHandler;
 import net.zombiegirl.artisanal.item.ModItemGroups;
 import net.zombiegirl.artisanal.item.ModItems;
 import org.slf4j.Logger;
@@ -30,6 +31,7 @@ public class Artisanal implements ModInitializer {
 
 
         ModItems.registerModItems();
+        GreatSwordBlockHandler.register();
 
     }
 }
