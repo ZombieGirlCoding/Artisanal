@@ -16,8 +16,8 @@ import static net.minecraft.client.render.model.json.ModelTransformationMode.GUI
 
 public class GreatSwordItemRenderer implements GreatSwordItemRendererInterface {
     private static final String MOD_ID = "artisanal";
-    private static final ModelIdentifier GUI_MODEL_ID = new ModelIdentifier(new Identifier(MOD_ID, "great_sword_gui"), "inventory");
-    private static final ModelIdentifier HANDHELD_MODEL_ID = new ModelIdentifier(new ModelIdentifier(MOD_ID, "great_sword"), "handheld");
+    private static final ModelIdentifier GUI_MODEL_ID = new ModelIdentifier(Identifier.of(MOD_ID, "great_sword_gui"), "inventory");
+    private static final ModelIdentifier HANDHELD_MODEL_ID = new ModelIdentifier(Identifier.of(MOD_ID, "great_sword"), "handheld");
 
 
 
