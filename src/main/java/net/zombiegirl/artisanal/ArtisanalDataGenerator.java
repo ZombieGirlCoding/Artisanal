@@ -11,6 +11,6 @@ public class ArtisanalDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(ModRecipeProvider::new);
-
+        pack.addProvider(ModModelProvider::new);
 	}
 }
