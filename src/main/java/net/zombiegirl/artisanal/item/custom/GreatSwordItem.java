@@ -16,7 +16,7 @@ import net.zombiegirl.artisanal.event.GreatSwordBlockHandler;
 public class GreatSwordItem extends SwordItem {
 
     public GreatSwordItem() {
-        super(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 8, -2.75f)));
+        super(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 8, -3.15f)));
     }
 
 

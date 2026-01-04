@@ -1,4 +1,10 @@
 package net.zombiegirl.artisanal.client;
 
-public class ArtisanalClient {
+import net.fabricmc.api.ClientModInitializer;
+
+public class ArtisanalClient implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+
+    }
 }

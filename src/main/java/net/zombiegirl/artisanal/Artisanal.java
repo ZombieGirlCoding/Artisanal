@@ -15,6 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.zombiegirl.artisanal.client.GUIHeldVaryingItemRenderer;
 import net.zombiegirl.artisanal.event.GreatSwordBlockHandler;
 import net.zombiegirl.artisanal.item.ModItemGroups;
 import net.zombiegirl.artisanal.item.ModItems;
