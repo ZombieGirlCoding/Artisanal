@@ -10,6 +10,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
+
 import static net.fabricmc.loader.impl.lib.mappingio.format.FeatureSet.MetadataSupport.FIXED;
 import static net.minecraft.client.render.model.json.ModelTransformationMode.GROUND;
 import static net.minecraft.client.render.model.json.ModelTransformationMode.GUI;
@@ -46,7 +47,7 @@ public class GreatSwordItemRenderer implements GreatSwordItemRendererInterface {
         // Preferred 1.21-compatible call:
         // renderItem(ItemStack stack, ModelTransformation.Mode transformType, boolean leftHanded,
         //            MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel model)
-        //   itemRenderer.renderItem(stack, renderMode, false, matrices, vertexConsumers, light, overlay, model);
+        itemRenderer.renderItem(stack, renderMode, false, matrices, vertexConsumers, light, overlay, model);
 
         // If the above line does not compile in your mappings, try one of these alternatives (uncomment the one that matches):
         // Alternative A (some mappings/providers use renderBakedItemModel publicly):
