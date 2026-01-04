@@ -18,6 +18,7 @@
 		"main": [
 			"net.zombiegirl.artisanal.Artisanal"
 		],
+
 		"fabric-datagen": [
 			"net.zombiegirl.artisanal.ArtisanalDataGenerator"
 		]
