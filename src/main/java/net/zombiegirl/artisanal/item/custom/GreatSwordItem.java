@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class GreatSwordItem extends SwordItem {
 
     public GreatSwordItem() {
-        super (ToolMaterials.NETHERITE, new Item.Settings().fireproof().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 5, -2.8F))
+        super (ToolMaterials.NETHERITE, new Item.Settings().fireproof().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 6, -3.2F))
         );
     }
 
