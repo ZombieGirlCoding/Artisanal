@@ -69,15 +69,15 @@ public class GreatSwordBlockHandler {
                         player.clearActiveItem();
                         active.damage(1, player, slot);
                         if (player.getWorld() != null) {
-                                player.getWorld().playSound(
-                                        null,
-                                        player.getX(), player.getY(), player.getZ(),
-                                        SoundEvents.ENTITY_ITEM_BREAK,
-                                        SoundCategory.PLAYERS,
-                                        1.0F,
-                                        1.0F
-                                );
-                            }
+                            player.getWorld().playSound(
+                                    null,
+                                    player.getX(), player.getY(), player.getZ(),
+                                    SoundEvents.ENTITY_ITEM_BREAK,
+                                    SoundCategory.PLAYERS,
+                                    1.0F,
+                                    1.0F
+                            );
+                        }
                     } else {
                         active.damage(1, player, slot);
                         if (player.getWorld() != null) {
