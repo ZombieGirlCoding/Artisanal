@@ -19,7 +19,7 @@ public class ModModelPredicates {
 
        private static void registerCustomSword (Item item){
             ModelPredicateProviderRegistry.register(
-                    ModItems.GREAT_SWORD,
+                    item,
                     Identifier.ofVanilla("blocking"),
                     (stack, world, entity, seed) ->
                             entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F

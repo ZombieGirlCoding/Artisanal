@@ -26,11 +26,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("DND")
                 .pattern("SD ")
                 .input('D', Items.DIAMOND)
-                .input('N', Items.NETHERITE_BLOCK)
+                .input('N', Items.NETHERITE_INGOT)
                 .input('S', Items.BREEZE_ROD)
                 .criterion("has_diamond", conditionsFromItem(Items.DIAMOND))
                 .criterion("has_breeze_rod", conditionsFromItem(Items.BREEZE_ROD))
-                .criterion("has_netherite_block", conditionsFromItem(Items.NETHERITE_BLOCK))
+                .criterion("has_netherite_ingot", conditionsFromItem(Items.NETHERITE_INGOT))
                 .offerTo(exporter);
 
     }
