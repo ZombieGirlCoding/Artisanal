@@ -10,10 +10,10 @@ import net.zombiegirl.artisanal.item.custom.GreatSwordItem;
 
 public class ModItems {
 
-    public static final Item GREAT_SWORD = registerItem(new GreatSwordItem());
+    public static final Item GREAT_SWORD = registerItem("great_sword", new GreatSwordItem());
 
 
-    private static Item registerItem(Item item) {
+    private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Artisanal.MOD_ID, "great_sword"), item);
     }
 
@@ -21,9 +21,8 @@ public class ModItems {
     public static void registerModItems () {
         Artisanal.LOGGER.info("Registering Mod Item For" + Artisanal.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(GREAT_SWORD);
-        });
+        net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register(entries ->
+                        entries.add(GREAT_SWORD));
     }
-
 }

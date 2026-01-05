@@ -14,7 +14,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 import net.zombiegirl.artisanal.item.custom.GreatSwordItem;
 
-import javax.swing.*;
 
 
 public class GreatSwordBlockHandler {
