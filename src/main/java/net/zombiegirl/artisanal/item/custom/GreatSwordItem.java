@@ -17,6 +17,7 @@ public class GreatSwordItem extends SwordItem {
 
     @Override
     public UseAction getUseAction(ItemStack stack) {
+        Identifier.ofVanilla("blocking");
         return UseAction.BLOCK;
     }
 

@@ -19,7 +19,6 @@ public class ModItemGroups {
 
                         entries.add(ModItems.GREAT_SWORD);
 
-
                     }).build());
 
     public static void registerItemGroups() {
