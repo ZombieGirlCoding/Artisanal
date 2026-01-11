@@ -83,7 +83,7 @@ public class ModModelPredicates extends ModelPredicateProviderRegistry {
                     ModItems.GREAT_SWORD,
                     Identifier.ofVanilla("blocking"),
                     (stack, world, entity, seed) ->
-                            entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F
+                            entity != null && entity.isUsingItem() && entity.getActiveItem().isOf(item) ? 1.0F : 0.0F
             );
        }
 

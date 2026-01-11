@@ -4,7 +4,8 @@
   "texture_size": [32, 32],
   "gui_light": "front",
   "textures": {
-    "1": "artisanal:item/great_sword"
+    "1": "artisanal:item/great_sword",
+    "particle": "great_sword"
   },
   "elements": [
     {
@@ -547,13 +548,15 @@
       "translation": [ -7.53, -1.5, -5.13 ],
       "scale": [ 1.15, 1.15, 1.15 ]
     }
-    },
-    "overrides": [
-      {
-        "predicate": {"blocking": 1},
-        "model": "artisanal:item/great_sword_handheld_blocking"
-      }
-    ],
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "artisanal:item/great_sword_handheld_blocking"
+    }
+  ],
   "groups": [
     {
       "name": "great_sword",
@@ -563,4 +566,3 @@
     }
   ]
 }
-
