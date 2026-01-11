@@ -3,6 +3,7 @@ package net.zombiegirl.artisanal.mixin;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.zombiegirl.artisanal.Artisanal;
 import net.zombiegirl.artisanal.item.ModItems;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
@@ -45,10 +46,21 @@ public abstract class ItemRendererMixin {
             ordinal = 1
     )
     public BakedModel getHeldItemModelMixin(BakedModel bakedModel, @Local(argsOnly = true) ItemStack stack) {
-        if (stack.getItem() == ModItems.GREAT_SWORD) {
-            return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Artisanal.MOD_ID, "great_sword_handheld")));
+        // If not our sword, leave it alone
+        if (stack.getItem() != ModItems.GREAT_SWORD) {
+            return bakedModel;
         }
 
-        return bakedModel;
+        // Client-only check: if the local player is actively using the Great Sword,
+        // return the "blocking" handheld model so first-person transforms change.
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client != null && client.player != null) {
+            if (client.player.isUsingItem() && client.player.getActiveItem().isOf(ModItems.GREAT_SWORD)) {
+                // Return the blocking handheld model directly
+                return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Artisanal.MOD_ID, "great_sword_handheld_blocking")));
+            }
+        }
+        // Otherwise, return the normal handheld model
+        return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(Artisanal.MOD_ID, "great_sword_handheld")));
     }
 }

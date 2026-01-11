@@ -9,7 +9,6 @@ public class ArtisanalModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModModelPredicates.registerModelPredicates();
-        GreatSwordClientHandler.initClient();
     }
 }
 

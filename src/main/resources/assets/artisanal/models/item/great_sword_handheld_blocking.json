@@ -4,7 +4,8 @@
   "texture_size": [32, 32],
   "gui_light": "front",
   "textures": {
-    "1": "artisanal:item/great_sword_handheld_blocking"
+    "1": "artisanal:item/great_sword",
+    "particle": "great_sword"
   },
   "elements": [
     {
@@ -538,17 +539,15 @@
       "scale": [ 1.25, 1.25, 1.25 ]
     },
     "firstperson_righthand": {
-      "rotation": [ 15, -50, 65 ],
-      "translation": [ -7.53, -1.5, 5.13 ],
+      "rotation": [ 175, 35, 165 ],
+      "translation": [ -2.53, -4, -5.13 ],
       "scale": [ 1.15, 1.15, 1.15 ]
     },
     "firstperson_lefthand": {
-      "rotation": [ 90, -50, 65 ],
-      "translation": [ -7.53, -1.5, -5.13 ],
+      "rotation": [ 90, -35, 65 ],
+      "translation": [ -7.53, -3.5, -5.13 ],
       "scale": [ 1.15, 1.15, 1.15 ]
     },
-
-
   "groups": [
     {
       "name": "great_sword",
