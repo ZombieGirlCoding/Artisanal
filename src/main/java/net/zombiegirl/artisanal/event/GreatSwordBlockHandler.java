@@ -13,7 +13,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 import net.zombiegirl.artisanal.item.custom.GreatSwordItem;
-
+import net.zombiegirl.artisanal.sound.ModSounds;
 
 
 public class GreatSwordBlockHandler {
@@ -85,7 +85,7 @@ public class GreatSwordBlockHandler {
                                 player.getWorld().playSound(
                                         null,
                                         player.getX(), player.getY(), player.getZ(),
-                                        SoundEvents.ITEM_SHIELD_BLOCK, // item.shield.block
+                                        ModSounds.GREAT_SWORD_BLOCK, // item.shield.block
                                         SoundCategory.PLAYERS,
                                         1.0F,
                                         1.0F

@@ -5,6 +5,7 @@ import net.minecraft.util.Identifier;
 import net.zombiegirl.artisanal.event.GreatSwordBlockHandler;
 import net.zombiegirl.artisanal.item.ModItemGroups;
 import net.zombiegirl.artisanal.item.ModItems;
+import net.zombiegirl.artisanal.sound.ModSounds;
 import net.zombiegirl.artisanal.util.ModModelPredicates;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,5 +27,7 @@ public class Artisanal implements ModInitializer {
 
         ModItems.registerModItems();
         GreatSwordBlockHandler.register();
+
+        ModSounds.registerSounds();
     }
 }

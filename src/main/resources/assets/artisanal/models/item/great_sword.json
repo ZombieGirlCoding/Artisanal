@@ -1,8 +1,6 @@
 {
-  "parent": "item/generated",
-  "gui_light": "front",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "artisanal:item/great_sword_gui"
-
   }
 }
