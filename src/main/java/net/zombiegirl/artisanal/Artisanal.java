@@ -26,7 +26,5 @@ public class Artisanal implements ModInitializer {
 
         ModItems.registerModItems();
         GreatSwordBlockHandler.register();
-        ModModelPredicates.registerModelPredicates();
-
     }
 }
